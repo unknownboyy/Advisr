@@ -8,28 +8,33 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import java.sql.Timestamp;
 
 @Data
 @Entity
-@Builder
 @ToString
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class User {
+public class UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String firstName;
-    private String lastName;
+    @OneToOne(cascade = CascadeType.ALL)
+    private User user;
 
-    private String email;
+    private Timestamp timestamp;
+
+    private String password;
 
 }
