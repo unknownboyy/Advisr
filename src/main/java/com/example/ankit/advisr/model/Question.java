@@ -3,10 +3,13 @@ package com.example.ankit.advisr.model;
 import com.example.ankit.advisr.interfaces.QuestionType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,6 +18,7 @@ import javax.persistence.OneToOne;
 import java.sql.Timestamp;
 import java.util.List;
 
+@Data
 @Entity
 @Builder
 @ToString
@@ -31,6 +35,7 @@ public class Question {
     private String heading;
     private String description;
 
+    @Enumerated(value = EnumType.STRING)
     private QuestionType type;
 
     @OneToOne
