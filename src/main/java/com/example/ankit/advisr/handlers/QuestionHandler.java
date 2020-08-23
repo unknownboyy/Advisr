@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.ankit.advisr.utils.Constants.Session.USER_ID;
-import static com.example.ankit.advisr.utils.QuestionUtils.createLikeQuery;
+import static com.example.ankit.advisr.utils.IOUtils.createLikeQuery;
 
 @AllArgsConstructor
 @Slf4j

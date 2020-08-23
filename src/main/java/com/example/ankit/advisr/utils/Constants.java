@@ -16,6 +16,14 @@ public class Constants {
         public static final String GET_PRIORITY_QUESTIONS = "/getPriorityQuestions";
         public static final String GET_QUESTIONS_BY_DESCRIPTION_AND_HEADING = "/getQueByHeadingAndDescription";
         public static final String GET_QUESTION_BY_ID = "/getQueById";
+
+        // Routes for ConnectionController
+        public static final String GET_CONNECTIONS = "/getConnections";
+        public static final String GET_SUGGESTIONS = "/getSuggestions";
+        public static final String GET_CONNECTION_REQUESTS = "/getConnectionRequests";
+        public static final String REQUEST_CONNECTION = "/requestConnection";
+        public static final String GET_MY_REQUESTS = "/getMyRequests";
+        public static final String ACCEPT_CONNECTION = "/acceptConnectionRequest";
     }
 
     public static class User {
