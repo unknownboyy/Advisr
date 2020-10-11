@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### STATIC DATA ###
+src/main/resources/static/testData
